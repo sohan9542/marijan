@@ -80,10 +80,17 @@
  right: 10px!important;
 
 }
-
+.type--base{
+  font-size: 18px;
+}
 
 @media only screen and (max-width: 600px) {
 .container{
   padding: 0 20px;
 }
+.type--base{
+  font-size: 14px;
 }
+
+}
+
