@@ -1,11 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
+    " rel="stylesheet">
 </head>
+
 <body>
-    Product Details
+    <section id="navbar" class=" w-full fixed transition-transform duration-300 ease-in-out top-0 left-0  z-[500]  ">
+        <div class=" w-full py-2 bg-[#D6D6E5]">
+            <div class="container">
+                <div class=" w-full flex items-center justify-between">
+                    <p class=" text-[12px] lg:text-[14px]">$ CAD · EN</p>
+                    <p class= "text-[12px] lg:text-[16px]">We donate $1 from every purchase
+                    </p>
+                    <p class=" text-[12px] lg:text-[14px] cursor-pointer">Log in</p>
+                </div>
+            </div>
+        </div>
+        <div class=" bg-white border-b">
+            <div class="container">
+                <div class="flex  items-center justify-between">
+                    <div class=" flex items-center pr-6 py-4 lg:py-0 gap-5">
+                        <img class="w-[90px] mt-2"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/paper.png?v=1666377006&width=400"
+                            alt="">
+                        <div id="trend" class="hidden lg:flex items-center  cursor-pointer gap-1 px-4  py-6  pr-4">
+                            <p class="text-[18px] he">Trending</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div id="toneTrigger"
+                            class="hidden lg:flex items-center  cursor-pointer gap-1 px-4  py-6  pr-4">
+                            <p class="text-[18px] he">Tone</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="hidden lg:flex items-center  cursor-pointer gap-1 px-4  py-6  pr-4">
+                            <p class="text-[18px] he">Subject</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="hidden lg:flex items-center  cursor-pointer gap-1 px-4  py-6  pr-4">
+                            <p class="text-[18px] he">About</p>
+
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div id="cartTrigger" class=" cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-shopping-cart">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="trending" class=" absolute   top-[100px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
+            <div class="container">
+                <div class=" py-5 flex items-center justify-between">
+                    <div>
+                        <a href="#" class="text-[20px] he"><strong>Trending</strong></a>
+                        <div class=" mt-5 flex flex-col">
+                            <a href="#" class="he text-[20px]">New Arrivals</a>
+                            <a href="#" class="he text-[20px] my-4">Best Sellers</a>
+                            <a href="#" class="he text-[20px]">All Collections</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="w-[300px]"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group_13.png?v=1670526184&width=600"
+                            alt="">
+
+                        <h1 class="text-[24px] mt-2 heroText">BestSeller</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tone" class=" absolute   top-[100px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
+            <div class="container">
+                <div class=" py-5 flex items-center justify-between">
+                    <div>
+                        <a href="#" class="text-[20px] he"><strong>Tone</strong></a>
+                        <div class=" mt-5 flex flex-col">
+                            <a href="#" class="he text-[20px]">Moody </a>
+                            <a href="#" class="he text-[20px] my-4">Crystal</a>
+                            <a href="#" class="he text-[20px]">Vibrant</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="w-[300px]"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/Frame_8_fb094ac1-6c08-44cb-83c0-e079ef89dd72.png?v=1666377771&width=600"
+                            alt="">
+
+                        <h1 class="text-[24px] mt-2 heroText">Perfect Portraits</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div id="sidebar"
+        class=" min-h-screen transition-transform duration-300 ease-in-out translate-x-[100%] fixed right-0 h-full top-0 z-50 w-full lg:w-[25vw] bg-white">
+        <div class=" bg-[#DEDEDE] px-4 py-2  flex items-center justify-between">
+            <button id="close" class=" bg-[#EEEEEE] p-4 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <p class="text-[20px]">Cart</p>
+        </div>
+        <div class=" bg-[#EEEEEE] p-4">
+            <p>You're $99 CAD away from free shipping
+
+            </p>
+            <div class=" mt-2 w-full h-[9px] bg-[#DEDEDE] rounded-[12px]">
+
+            </div>
+        </div>
+        <div class=" w-full h-full flex items-center justify-center">
+            <div class="flex flex-col items-center gap-3">
+                <p>Your Cart is empty</p>
+                <button
+                    class="bg-[#2D2DBF] px-[24px] py-[12px] hover:bg-opacity-75 duration-150 ease-linear tracking-wider rounded-[32px] font-semibold text-[16px] text-white">
+                    Shop all</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="min-h-screen ">
+        <div class=" container">
+            <div class=" grid gap-3 mt-[109px] grid-cols-1 lg:grid-cols-3">
+                <div class="lg:col-span-2 flex items-center justify-center h-full border">
+                    <div id="image-slider2" class="splide relative ">
+
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide">
+                                    <div
+                                        class=" w-full cursor-pointer hover:opacity-60 h-[540px] ease-out duration-300">
+                                        <img class=" w-full h-full object-cover"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400">
+                                    </div>
+
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div
+                            class="splide__arrows absolute top-[0px] flex items-center justify-between w-full right-0  z-50 ">
+                            <button
+                                class="splide__arrow splide__arrow--prev bg-[#EEEEEE] transform -scale-x-100 relative -top-[0px] w-[45px] h-[45px] transform    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path
+                                        d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z"
+                                        data-name="4-Arrow Left" />
+                                </svg>
+                            </button>
+                            <button class="splide__arrow splide__arrow--next bg-[#EEEEEE]     w-[45px]  h-[45px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path
+                                        d="m31.71 15.29-10-10-1.42 1.42 8.3 8.29H0v2h28.59l-8.29 8.29 1.41 1.41 10-10a1 1 0 0 0 0-1.41z"
+                                        data-name="3-Arrow Right" />
+                                </svg>
+                            </button>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" border">
+                    <div class="border-b w-full p-2 flex gap-2">
+                        <a class="text-[14px]" href="/" title="Home" rel="nofollow">Home</a> /
+                        <span class="text-[14px]">Green Squares</span>
+                    </div>
+                    <div class=" px-3 py-5 border-b  ">
+                        <h1 class="heroText pb-2 leading-[30px] text-[30px]">Green Squares
+                        </h1>
+                        <p class="text-[20px]">$20 CAD
+                            $50 CAD</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-[14px]">Variant
+                            : Frame</p>
+                        <div class=" mt-3  flex items-center gap-1">
+                            <button class="px-5 tab1 pt-2 pb-3 rounded-[32px] bg-[#EEEEEE] leading-[16px]">
+                                Frame
+                            </button>
+                            <button class="px-5 tab1 pt-2 pb-3 rounded-[32px] bg-[#EEEEEE] leading-[16px]">
+                                Canvas
+                            </button>
+                        </div>
+                        <p class="text-[14px] mt-3">Size
+                            : 30 x 30 in</p>
+                        <div class=" mt-3  flex items-center gap-1">
+                            <button class="px-5 tab2 pt-2 pb-3 rounded-[32px] bg-[#EEEEEE] leading-[16px]">
+                                30 x 30 in
+                            </button>
+                            <button class="px-5 tab2 pt-2 pb-3 rounded-[32px] bg-[#EEEEEE] leading-[16px]">
+                                20 x 20 in
+                            </button>
+                            <button class="px-5 tab2 pt-2 pb-3 rounded-[32px] bg-[#EEEEEE] leading-[16px]">
+                                10 x 10 in
+                            </button>
+                        </div>
+                        <button
+                            class="mt-5 bg-[#2D2DBF] text-[20px] leading-[20px] w-full rounded-[32px] text-center py-3 text-white">
+                            Add to Cart ·
+                            $20 CAD
+                        </button>
+                        <div class="my-4 w-full bg-[#EEEEEE] text-center py-2 text-[14px]">
+                            Free shipping over $50 · Easy returns
+                        </div>
+                        <p class="underline text-[20px]">Need Help?</p>
+                    </div>
+                    <div class=" mt-3 border-t w-full dfaq">
+                        <div class="w-full pt-3 pb-3 px-3 flex cursor-pointer items-center justify-between">
+                            <h1 class="text-[20px] font-semibold">Shipping and returns</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-up">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="desc w-full p-3">
+                            <p class=" text-[18px]">We have a no-hassle shipping and return policy. All items are
+                                shipped the next day.</p>
+                            <p class="mt-2 text-[18px]">If you want to make a return just use the enclosed return label
+                                and you'll
+                                receive a store credit.
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" mt-3 border-t w-full dfaq bg-[#EEEEEE]">
+                        <div class="w-full pt-3 pb-3 px-3 flex cursor-pointer items-center justify-between">
+                            <h1 class="text-[20px] font-semibold">You may also like</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-up">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="desc w-full p-3">
+                            <div
+                                class="border border-gray-300 cursor-pointer  w-full bg-white  grid grid-cols-4 rounded-sm">
+                                <div class="bg-[#EEEEEE] h-[100px] overflow-hidden flex items-center justify-center">
+                                    <img class="relative "
+                                        src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400"
+                                        alt="">
+                                </div>
+                                <div class="col-span-3 px-3 flex items-center justify-between h-full w-full">
+                                    <div>
+                                        <p class="text-[14px]">Still Life with Bottles and Fruit</p>
+                                        <p class="text-[14px] mt-1">$20 CAD</p>
+                                    </div>
+                                    <button class="bg-black text-white px-5 py-2 rounded-[32px]">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="border border-gray-300 cursor-pointer mt-2  w-full bg-white  grid grid-cols-4 rounded-sm">
+                                <div class="bg-[#EEEEEE] h-[100px] overflow-hidden flex items-center justify-center">
+                                    <img class="relative "
+                                        src="https://paperthemedemo.myshopify.com/cdn/shop/products/smartmockups_l5r7t1yn.jpg?v=1670526230&width=1400"
+                                        alt="">
+                                </div>
+                                <div class="col-span-3 px-3 flex items-center justify-between h-full w-full">
+                                    <div>
+                                        <p class="text-[14px]">Still Life with Bottles and Fruit</p>
+                                        <p class="text-[14px] mt-1">$20 CAD</p>
+                                    </div>
+                                    <button class="bg-black text-white px-5 py-2 rounded-[32px]">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- reviews -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 py-[100px]  gap-10 ">
+                <div class="w-full">
+                    <div class="border-l px-4">
+                        <p class="text-[20px]">I am extremely satisfied with my purchase and would highly recommend this
+                            art print to anyone looking to add some visual interest to their home. The quality of the
+                            paper and the overall aesthetic of the print are top-notch.</p>
+                    </div>
+                    <div class="mt-2 flex items-center gap-2">
+                        <img class="w-[40px] h-[40px] rounded-full object-cover"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/lorem-face-5198_9efe2d86-5556-464f-9bee-f6aa1746dd12.jpg?v=1672850348&width=80"
+                            alt="">
+                        <p class="text-[14px]">Sarah D.</p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="border-l px-4">
+                        <p class="text-[20px]">I am extremely satisfied with my purchase and would highly recommend this
+                            art print to anyone looking to add some visual interest to their home. The quality of the
+                            paper and the overall aesthetic of the print are top-notch.</p>
+                    </div>
+                    <div class="mt-2 flex items-center gap-2">
+                        <img class="w-[40px] h-[40px] rounded-full object-cover"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/lorem-face-5198_9efe2d86-5556-464f-9bee-f6aa1746dd12.jpg?v=1672850348&width=80"
+                            alt="">
+                        <p class="text-[14px]">Sarah D.</p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="border-l px-4">
+                        <p class="text-[20px]">I am extremely satisfied with my purchase and would highly recommend this
+                            art print to anyone looking to add some visual interest to their home. The quality of the
+                            paper and the overall aesthetic of the print are top-notch.</p>
+                    </div>
+                    <div class="mt-2 flex items-center gap-2">
+                        <img class="w-[40px] h-[40px] rounded-full object-cover"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/lorem-face-5198_9efe2d86-5556-464f-9bee-f6aa1746dd12.jpg?v=1672850348&width=80"
+                            alt="">
+                        <p class="text-[14px]">Sarah D.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- faqqq -->
+
+            <div class="mb-[100px] border-t pt-[100px]">
+                <h1 class="text-[30px] heroText font-semibold tracking-wider mb-5">FAQs</h1>
+
+                <div class=" mt-3  border-b w-full dfaq">
+                    <div class="w-full pt-3 pb-3 px-3 flex cursor-pointer items-center justify-between">
+                        <h1 class="text-[20px] font-semibold">How do I get free shipping?</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-up">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </div>
+                    <div class="desc w-full p-3">
+                        <p class=" lg:w-[60%] text-[18px]">Free shipping will automatically be applied to all domestic
+                            orders over $75. Simplfy add over $75 to your cart and you will see the discount while
+                            checking out.</p>
+
+                    </div>
+                </div>
+                <div class=" mt-3  border-b w-full dfaq">
+                    <div class="w-full pt-3 pb-3 px-3 flex cursor-pointer items-center justify-between">
+                        <h1 class="text-[20px] font-semibold">How much is shipping?</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-up">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </div>
+                    <div class="desc w-full p-3">
+                        <p class=" lg:w-[60%] text-[18px]">Shipping is free for orders over $75. For all other domestic
+                            orders shipping is $10. International shipping is $20.</p>
+
+                    </div>
+                </div>
+                <div class=" mt-3 border-b w-full dfaq">
+                    <div class="w-full pt-3 pb-3 px-3 flex cursor-pointer items-center justify-between">
+                        <h1 class="text-[20px] font-semibold">How long does shipping take?</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-up">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </div>
+                    <div class="desc w-full p-3">
+                        <p class=" lg:w-[60%] text-[18px]">We typically ship orders out within 1-2 business days of
+                            ordering. From there shipping may take 3-5 business days. For international orders shipping
+                            can take between 7-14 business days.</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ---------- -->
+         
+          
+        </div>
+        <section class=" mb-[100px]">
+            <div class="container">
+                <h1 class="text-[30px] heroText font-semibold tracking-wider mb-5">Shop by subject
+    
+                </h1>
+                <div id="image-slider" class="splide ">
+    
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="/productdetails.html">
+                                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                                        <img class=" w-full object-cover h-full"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                                            alt="">
+                                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                                            <img class=" w-full h-full object-cover"
+                                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                                alt="">
+                                        </div>
+                                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                                pick</button>
+                                        </div>
+                                        <div
+                                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                                            <button
+                                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                                    <p>From $9 CAD</p>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="/productdetails.html">
+                                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                                        <img class=" w-full object-cover h-full"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                                            alt="">
+                                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                                            <img class=" w-full h-full object-cover"
+                                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                                alt="">
+                                        </div>
+                                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                                pick</button>
+                                        </div>
+                                        <div
+                                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                                            <button
+                                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                                    <p>From $9 CAD</p>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="/productdetails.html">
+                                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                                        <img class=" w-full object-cover h-full"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                                            alt="">
+                                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                                            <img class=" w-full h-full object-cover"
+                                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                                alt="">
+                                        </div>
+                                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                                pick</button>
+                                        </div>
+                                        <div
+                                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                                            <button
+                                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                                    <p>From $9 CAD</p>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="/productdetails.html">
+                                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                                        <img class=" w-full object-cover h-full"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                                            alt="">
+                                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                                            <img class=" w-full h-full object-cover"
+                                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                                alt="">
+                                        </div>
+                                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                                pick</button>
+                                        </div>
+                                        <div
+                                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                                            <button
+                                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                                    <p>From $9 CAD</p>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="/productdetails.html">
+                                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                                        <img class=" w-full object-cover h-full"
+                                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                                            alt="">
+                                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                                            <img class=" w-full h-full object-cover"
+                                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                                alt="">
+                                        </div>
+                                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                                            <button
+                                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                                pick</button>
+                                        </div>
+                                        <div
+                                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                                            <button
+                                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                                    <p>From $9 CAD</p>
+                                </a>
+                            </li>
+                        
+    
+                        </ul>
+                    </div>
+                    <div class="splide__arrows ">
+                        <button
+                            class="splide__arrow splide__arrow--prev bg-[#EEEEEE] w-[45px] h-[45px] transform absolute -left-[100px]  -scale-x-100  ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z"
+                                    data-name="4-Arrow Left" /></svg>
+                        </button>
+                        <button
+                            class="splide__arrow splide__arrow--next bg-[#EEEEEE] absolute   w-[45px] top-[22px] -right-[10px] h-[45px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path
+                                    d="m31.71 15.29-10-10-1.42 1.42 8.3 8.29H0v2h28.59l-8.29 8.29 1.41 1.41 10-10a1 1 0 0 0 0-1.41z"
+                                    data-name="3-Arrow Right" /></svg>
+                        </button>
+    
+    
+    
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <div class="container mb-[100px]">
+            <h1 class="text-[30px] heroText font-semibold tracking-wider mb-5">Recently Viewed </h1>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-4">
+                <a href="/productdetails.html">
+                    <div class="relative  cardParent w-full h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                        <img class=" w-full object-cover h-full"
+                            src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
+                            alt="">
+                        <div class=" absolute cardChild top-0 left-0 w-full h-full z-20">
+                            <img class=" w-full h-full object-cover"
+                                src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
+                                alt="">
+                        </div>
+                        <div class=" absolute top-2 left-2 flex items-center gap-1 z-40">
+                            <button
+                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
+                            <button
+                                class=" px-3 py-1 rounded-[20px] font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Staff
+                                pick</button>
+                        </div>
+                        <div
+                            class=" btn absolute flex items-center justify-center bottom-0 opacity-0 duration-300 ease-out left-0 w-full z-40">
+                            <button
+                                class=" w-[90%] bg-black rounded-[32px] py-3 flex items-center justify-center text-white">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                    <h2 class="text-[20px] mt-2">Grape Vine</h2>
+                    <p>From $9 CAD</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class=" border-t border-[#55555515] bg-[#EEEEEE] w-full">
+        <div class="container">
+            <div class=" flex py-[50px] flex-col lg:flex-row lg:items-center justify-between">
+                <div>
+                    <h2 class="text-[20px] font-semibold">Save 10%</h2>
+                    <p class="text-[20px]">Keep up to date on new</p>
+                    <p class="text-[20px]">launches and save 10% </p>
+                    <div class="flex flex-col items-start gap-2">
+                        <input class=" mt-3 border w-full lg:w-auto bg-[#E3E3E4] border-[#55555515] px-4 py-2"
+                            placeholder="Enter your email" type="text">
+                        <button class=" bg-black hover:opacity-50 px-5 pt-2 pb-3 rounded-[32px]  text-white">Sign
+                            up</button>
+                    </div>
+                </div>
+                <div class=" flex  mt-10 lg:mt-0 items-start flex-col lg:flex-row gap-10 lg:gap-[200px]">
+                    <div class="flex gap-3 flex-col">
+                        <h2 class="text-[20px] font-semibold">Brand</h2>
+                        <a href="#" class=" opacity-50 text-[20px]">About</a>
+                        <a href="#" class=" opacity-50 text-[20px]">Blog</a>
+                        <a href="#" class=" opacity-50 text-[20px]">Theme features</a>
+                    </div>
+                    <div class="flex gap-3 flex-col">
+                        <h2 class="text-[20px] font-semibold">Support</h2>
+                        <a href="#" class=" opacity-50 text-[20px]">Help Center</a>
+                        <a href="#" class=" opacity-50 text-[20px]">Contact</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="border-t  border-[#55555515] w-full py-[20px] ">
+            <div class="container">
+                <div class="w-full flex flex-col lg:flex-row lg:items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <button class=" hover:opacity-50 bg-black px-5 pt-2 pb-3 rounded-[32px]  text-white">Log
+                            in</button>
+
+                        <button
+                            class=" hover:opacity-50 bg-black px-5 pt-2 pb-3 rounded-[32px] flex items-center gap-1  text-white">
+                            <img class="w-[18px]" src="https://flagicons.lipis.dev/flags/4x3/ca.svg" alt=""> $ CAD · EN
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+
+                    </div>
+                    <div class="flex flex-col lg:items-end gap-3">
+                        <div class="flex my-2 lg:my-0 items-center gap-2">
+                            <a href="" class="underline font-light">Terms of Service</a>
+                            <a href="" class="underline font-light">Privacy Policy</a>
+                        </div>
+                        <ul class="flex flex-wrap w-full gap-2 p-0 m-0 list-none md:justify-end" role="list">
+
+                            <li>
+                                <svg class="icon icon--full-color" viewBox="0 0 38 24"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                                    aria-labelledby="pi-visa">
+                                    <title id="pi-visa">Visa</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                    </path>
+                                    <path
+                                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                        fill="#142688"></path>
+                                </svg>
+                            </li>
+
+                            <li>
+                                <svg class="icon icon--full-color" viewBox="0 0 38 24"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                                    aria-labelledby="pi-master">
+                                    <title id="pi-master">Mastercard</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                    </path>
+                                    <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                    <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                                    <path fill="#FF5F00"
+                                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                                    </path>
+                                </svg>
+                            </li>
+
+                            <li>
+                                <svg class="icon icon--full-color" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-labelledby="pi-american_express" viewBox="0 0 38 24" width="38" height="24">
+                                    <title id="pi-american_express">American Express</title>
+                                    <path fill="#000"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                                        opacity=".07"></path>
+                                    <path fill="#006FCF"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                                    </path>
+                                    <path fill="#006FCF"
+                                        d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                                    </path>
+                                    <path fill="#006FCF"
+                                        d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
+                                    </path>
+                                    <path fill="#006FCF"
+                                        d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                                    </path>
+                                    <path fill="#006FCF"
+                                        d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                                    </path>
+                                </svg>
+
+                            </li>
+
+                            <li>
+                                <svg class="icon icon--full-color" viewBox="0 0 38 24"
+                                    xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
+                                    aria-labelledby="pi-paypal">
+                                    <title id="pi-paypal">PayPal</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                    </path>
+                                    <path fill="#003087"
+                                        d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
+                                    </path>
+                                    <path fill="#3086C8"
+                                        d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
+                                    </path>
+                                    <path fill="#012169"
+                                        d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
+                                    </path>
+                                </svg>
+                            </li>
+
+                            <li>
+                                <svg class="icon icon--full-color" viewBox="0 0 38 24"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                                    aria-labelledby="pi-diners_club">
+                                    <title id="pi-diners_club">Diners Club</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                    </path>
+                                    <path
+                                        d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+                                        fill="#3086C8"></path>
+                                </svg>
+                            </li>
+
+                            <li>
+                                <svg class="icon icon--full-color" viewBox="0 0 38 24" width="38" height="24" role="img"
+                                    aria-labelledby="pi-discover" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title id="pi-discover">Discover</title>
+                                    <path fill="#000" opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                    </path>
+                                    <path
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z"
+                                        fill="#fff"></path>
+                                    <path
+                                        d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z"
+                                        fill="#231F20"></path>
+                                    <path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                                        fill="url(#pi-paint0_linear)"></path>
+                                    <path opacity=".65"
+                                        d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                                        fill="url(#pi-paint1_linear)"></path>
+                                    <path
+                                        d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z"
+                                        fill="#231F20"></path>
+                                    <path
+                                        d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z"
+                                        fill="#231F20"></path>
+                                    <path
+                                        d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z"
+                                        fill="#F48120"></path>
+                                    <defs>
+                                        <linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632"
+                                            y2="9.104" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F89F20"></stop>
+                                            <stop offset=".25" stop-color="#F79A20"></stop>
+                                            <stop offset=".533" stop-color="#F68D20"></stop>
+                                            <stop offset=".62" stop-color="#F58720"></stop>
+                                            <stop offset=".723" stop-color="#F48120"></stop>
+                                            <stop offset="1" stop-color="#F37521"></stop>
+                                        </linearGradient>
+                                        <linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378"
+                                            y2="6.446" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F58720"></stop>
+                                            <stop offset=".359" stop-color="#E16F27"></stop>
+                                            <stop offset=".703" stop-color="#D4602C"></stop>
+                                            <stop offset=".982" stop-color="#D05B2E"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </li>
+
+                        </ul>
+                        <div class="w-full opacity-50 text-[14px] m-0--clear type--smaller">
+                            <a target="_blank" class=" underline" rel="nofollow"
+                                href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered
+                                by Shopify</a>
+
+                            Copyright 2024 ©. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
 </body>
+
 </html>
