@@ -23,7 +23,7 @@
             <div class="container">
                 <div class=" w-full flex items-center justify-between">
                     <p class=" text-[12px] lg:text-[14px]">$ CAD · EN</p>
-                    <p class= "text-[12px] lg:text-[16px]">We donate $1 from every purchase
+                    <p class="text-[12px] lg:text-[16px]">We donate $1 from every purchase
                     </p>
                     <p class=" text-[12px] lg:text-[14px] cursor-pointer">Log in</p>
                 </div>
@@ -127,9 +127,9 @@
 
     </section>
     <div id="sidebar"
-        class=" min-h-screen transition-transform duration-300 ease-in-out translate-x-[100%] fixed right-0 h-full top-0 z-50 w-full lg:w-[25vw] bg-white">
+        class=" h-screen transition-transform duration-300 ease-in-out translate-x-[100%] fixed right-0 h-full top-0 z-[600] w-full lg:w-[30vw] bg-white">
         <div class=" bg-[#DEDEDE] px-4 py-2  flex items-center justify-between">
-            <button id="close" class=" bg-[#EEEEEE] p-4 rounded-full">
+            <button id="close" class=" bg-[#EEEEEE] p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-x">
@@ -137,7 +137,7 @@
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <p class="text-[20px]">Cart</p>
+            <p class="text-[20px]">Cart (2)</p>
         </div>
         <div class=" bg-[#EEEEEE] p-4">
             <p>You're $99 CAD away from free shipping
@@ -147,13 +147,385 @@
 
             </div>
         </div>
-        <div class=" w-full h-full flex items-center justify-center">
-            <div class="flex flex-col items-center gap-3">
-                <p>Your Cart is empty</p>
-                <button
-                    class="bg-[#2D2DBF] px-[24px] py-[12px] hover:bg-opacity-75 duration-150 ease-linear tracking-wider rounded-[32px] font-semibold text-[16px] text-white">
-                    Shop all</button>
+        <div class=" w-full h-full  px-3 overflow-y-scroll ">
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start py-5 border-b gap-4">
+                <img class="w-[80px] h-[80px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
+                    alt="">
+                <div class="w-full">
+                    <div class="w-full flex  items-start justify-between">
+                        <div>
+                            <h1 class="text-[20px] leading-[20px]">
+                                Grape Vine</h1>
+                            <p class="text-[14px] mt-[5px]">Frame / 16 x 24 in</p>
+                            <p
+                                class="text-[14px] mt-[5px] bg-[#EEEEEE] px-3 pt-[5px] pb-[6px] rounded-[32px] leading-[14px]">
+                                SAVE20 - $20 CAD</p>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] text-right leading-[18px]">$80 CAD
+                            </h1>
+                            <h1 class="text-[20px] text-right leading-[20px] mt-[5px]">$100 CAD
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex  items-start justify-between">
+                        <div class="flex items-center border ">
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-minus">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="px-7 py-2 bg-[#EEEEEE] ">
+                                1
+                            </div>
+                            <div class="px-3 py-3 h-full  cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-plus">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-2">
+                            <button class="px-4 rounded-[32px] pt-[5px] pb-[9px] bg-[#EEEEEE] ">
+                                Edit
+                            </button>
+                            <button class="px-4 rounded-[32px] py-3 bg-[#EEEEEE] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class=" bg-white fixed bottom-0 px-3 w-full border-t left-0 z-[650] py-5">
+            <button class="bg-[#2D2DBF] w-full rounded-[32px] text-white text-center py-3">
+                Checkout. $164 CAD
+            </button>
         </div>
     </div>
 
@@ -163,17 +535,17 @@
             <h1 class="text-[50px] absolute bottom-4 heroText left-0 z-20 ">Portrait</h1>
         </div>
     </section>
-    <section class="w-full">
+    <section class="w-full mb-[100px]">
         <div class="container">
             <div class=" py-5 border-b flex items-center gap-3">
                 <div class="relative">
-                    <button class="px-4 rounded-[32px] py-2 text-[18px] bg-[#EEEEEE] flex items-center gap-1">Sort <svg
+                    <button class="pl-5 pr-4 rounded-[32px] py-3 text-[18px] bg-[#EEEEEE] sort flex items-center gap-1 leading-[16px]">Sort <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-chevron-down">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg></button>
-                    <div class="w-[300px] hidden bg-white border absolute top-[50px]  left-0 z-20 shadow-sm ">
+                    <div class="w-[300px]  bg-white border absolute hidden top-[50px] sort_content  z-[130] left-0 z-20 shadow-sm ">
 
 
                         <label
@@ -236,13 +608,14 @@
                 </div>
                 <div class="relative">
                     <button
-                        class="px-4 rounded-[32px] py-2 text-[18px] bg-[#EEEEEE] flex items-center gap-1">Availability
+                        class="pl-5 pr-5 rounded-[32px] py-3 text-[18px] bg-[#EEEEEE] av flex items-center leading-[16px]  gap-1">Availability
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-chevron-down">
                             <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg></button>
-                    <div class="w-[300px] hidden bg-white border absolute top-[50px]  left-0 z-20 shadow-sm ">
+                        </svg>
+                    </button>
+                    <div class="w-[300px] hidden bg-white border absolute top-[50px] z-[120] av_content  left-0 z-20 shadow-sm ">
 
                         <label class="flex items-center px-4 py-2 hover:color__bg-overlay-1"
                             for="Filter-filter.v.availability-1">
@@ -269,13 +642,13 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <button class="px-4 rounded-[32px] py-2 text-[18px] bg-[#EEEEEE] flex items-center gap-1">Price
+                    <button class="pr-4 pl-5 rounded-[32px] py-3 text-[18px] bg-[#EEEEEE] price flex items-center leading-[16px] gap-1">Price
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-chevron-down">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg></button>
-                    <div class="w-[300px] hidden  bg-white border absolute top-[50px]  left-0 z-20 shadow-sm ">
+                    <div class="w-[300px] hidden  bg-white price_content border absolute top-[50px] z-[120]  left-0 z-20 shadow-sm ">
 
                         <div class="flex items-center justify-center p-4 py-6 min-w-[256px]">
                             <div x-init="handlePriceFilterChange('min'); handlePriceFilterChange('max')"
@@ -610,7 +983,7 @@
             </div>
         </div>
     </section>
-    <footer class=" border-t border-[#55555515] bg-[#EEEEEE] w-full mt-20"></footer>
+    <footer class=" border-t border-[#55555515] bg-[#EEEEEE] w-full">
         <div class="container">
             <div class=" flex py-[50px] flex-col lg:flex-row lg:items-center justify-between">
                 <div>
@@ -647,12 +1020,14 @@
             <div class="container">
                 <div class="w-full flex flex-col lg:flex-row lg:items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <button class=" hover:opacity-50 bg-black px-5 pt-2 pb-3 rounded-[32px]  text-white">Log
+                        <button
+                            class=" hover:opacity-50 bg-black px-5 pt-3 pb-4 rounded-[32px] leading-[14px]  text-white">Log
                             in</button>
 
                         <button
-                            class=" hover:opacity-50 bg-black px-5 pt-2 pb-3 rounded-[32px] flex items-center gap-1  text-white">
-                            <img class="w-[18px]" src="https://flagicons.lipis.dev/flags/4x3/ca.svg" alt=""> $ CAD · EN
+                            class=" hover:opacity-50 bg-black pl-6 pr-5 pt-3 pb-3 rounded-[32px] flex items-center gap-1  text-white">
+                            <img class="w-[18px] object-cover" src="https://flagicons.lipis.dev/flags/4x3/ca.svg"
+                                alt=""> <span class="leading-[16px] -mt-[3px]">$ CAD · EN</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="feather feather-chevron-down">
@@ -837,7 +1212,7 @@
             </div>
         </div>
     </footer>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

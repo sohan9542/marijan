@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }).mount();
 
-
-
 });
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#image-slider2', {
         "type": "loop",
@@ -51,6 +52,19 @@ window.addEventListener('scroll', function () {
     }
 
     lastScrollTop = scrollTop;
+});
+
+const buy = document.querySelector('.buy')
+window.addEventListener('scroll', function () {
+    if (buy) {
+        if (window.scrollY < 500 || window.scrollY > 800) {
+            // Scroll down
+            buy.style.display = 'block'; // or any other CSS to hide the navbar
+        } else {
+            // Scroll up
+            buy.style.display = 'none';
+        }
+    }
 });
 
 const trend = document.getElementById("trend");
@@ -164,7 +178,7 @@ tab2.forEach((item, index) => {
 
 
 
-let dfaqActive = -1;
+let dfaqActive = 1;
 const dfaq = document.querySelectorAll('.dfaq');
 
 function updateTab() {
@@ -178,7 +192,7 @@ function updateTab() {
 
         } else {
             svgD.style.transform = 'rotate(180deg)'
-             desc.style.display = 'none'
+            desc.style.display = 'none'
         }
     });
 }
@@ -189,12 +203,50 @@ updateTab();
 // Add event listener to each button
 dfaq.forEach((item, index) => {
     item.addEventListener('click', () => {
-       if(dfaqActive !== index){
-        dfaqActive = index;
-       }
-       else{
-        dfaqActive = -1;
-       }
+        if (dfaqActive !== index) {
+            dfaqActive = index;
+        }
+        else {
+            dfaqActive = -1;
+        }
         updateTab();  // Update all borders after clicking
     });
+});
+
+
+
+
+const sort = document.querySelector('.sort')
+const sort_content = document.querySelector('.sort_content')
+const av = document.querySelector('.av')
+const av_content = document.querySelector('.av_content')
+const price = document.querySelector('.price')
+const price_content = document.querySelector('.price_content')
+
+sort.addEventListener('click', (e) => {
+    sort_content.style.display = 'block';
+    e.stopPropagation(); // Prevent click event from propagating to document
+});
+
+av.addEventListener('click', () => {
+    av_content.style.display = 'block'
+    e.stopPropagation(); // Prevent click event from propagating to document
+})
+
+price.addEventListener('click', () => {
+    price_content.style.display = 'block'
+    e.stopPropagation(); // Prevent click event from propagating to document
+})
+
+
+document.addEventListener('click', (e) => {
+    if (!sort.contains(e.target) && !sort_content.contains(e.target)) {
+        sort_content.style.display = 'none';
+    }
+    if (!av.contains(e.target) && !av_content.contains(e.target)) {
+        av_content.style.display = 'none';
+    }
+    if (!price.contains(e.target) && !price_content.contains(e.target)) {
+        price_content.style.display = 'none';
+    }
 });
