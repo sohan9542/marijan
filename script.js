@@ -130,19 +130,19 @@ closeTrigger.addEventListener("click", (e) => {
     document.querySelector('body').style.overflowY = 'scroll'
 })
 
-if(openbar){
+if (openbar) {
     openbar.addEventListener("click", (e) => {
 
         leftbar.style.transform = 'translateX(0)'
         document.querySelector('body').style.overflowY = 'hidden'
-    
+
     })
     closebar.addEventListener("click", (e) => {
         leftbar.style.transform = 'translateX(-100%)'
         document.querySelector('body').style.overflowY = 'scroll'
     })
-    
-    
+
+
 }
 
 
@@ -245,44 +245,46 @@ const av_content = document.querySelector('.av_content')
 const price = document.querySelector('.price')
 const price_content = document.querySelector('.price_content')
 
-sort.addEventListener('click', (e) => {
-    // sort_content.style.display = 'block';
-    if(sort_content.style.display === 'block'){
-        sort_content.style.display = 'none';
-    }
-    else{
-        sort_content.style.display = 'block';
-    }
-   
-});
+if (sort) {
+    sort.addEventListener('click', (e) => {
+        // sort_content.style.display = 'block';
+        if (sort_content.style.display === 'block') {
+            sort_content.style.display = 'none';
+        }
+        else {
+            sort_content.style.display = 'block';
+        }
 
-av.addEventListener('click', () => {
-    if(av_content.style.display === 'block'){
-        av_content.style.display = 'none';
-    }
-    else{
-        av_content.style.display = 'block';
-    }
-})
+    });
 
-price.addEventListener('click', () => {
-    if(price_content.style.display === 'block'){
-        price_content.style.display = 'none';
-    }
-    else{
-        price_content.style.display = 'block';
-    }
-})
+    av.addEventListener('click', () => {
+        if (av_content.style.display === 'block') {
+            av_content.style.display = 'none';
+        }
+        else {
+            av_content.style.display = 'block';
+        }
+    })
+
+    price.addEventListener('click', () => {
+        if (price_content.style.display === 'block') {
+            price_content.style.display = 'none';
+        }
+        else {
+            price_content.style.display = 'block';
+        }
+    })
 
 
-document.addEventListener('click', (e) => {
-    if (!sort.contains(e.target) && !sort_content.contains(e.target)) {
-        sort_content.style.display = 'none';
-    }
-    if (!av.contains(e.target) && !av_content.contains(e.target)) {
-        av_content.style.display = 'none';
-    }
-    if (!price.contains(e.target) && !price_content.contains(e.target)) {
-        price_content.style.display = 'none';
-    }
-});
+    document.addEventListener('click', (e) => {
+        if (!sort.contains(e.target) && !sort_content.contains(e.target)) {
+            sort_content.style.display = 'none';
+        }
+        if (!av.contains(e.target) && !av_content.contains(e.target)) {
+            av_content.style.display = 'none';
+        }
+        if (!price.contains(e.target) && !price_content.contains(e.target)) {
+            price_content.style.display = 'none';
+        }
+    });
+}
