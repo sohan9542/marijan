@@ -75,6 +75,10 @@ const cartTrigger = document.getElementById("cartTrigger");
 const sidebar = document.getElementById("sidebar");
 const closeTrigger = document.getElementById("close");
 
+const openbar = document.getElementById("openbar");
+const leftbar = document.getElementById("leftbar");
+const closebar = document.getElementById("closebar");
+
 trend.addEventListener("mouseenter", (e) => {
     trending.style.height = "auto"
     trending.style.borderTop = "1px solid rgba(0,0,0,0.1)"
@@ -117,12 +121,30 @@ tone.addEventListener("mouseleave", () => {
 cartTrigger.addEventListener("click", (e) => {
 
     sidebar.style.transform = 'translateX(0)'
+    document.querySelector('body').style.overflowY = 'hidden'
 
 })
 
 closeTrigger.addEventListener("click", (e) => {
     sidebar.style.transform = 'translateX(100%)'
+    document.querySelector('body').style.overflowY = 'scroll'
 })
+
+if(openbar){
+    openbar.addEventListener("click", (e) => {
+
+        leftbar.style.transform = 'translateX(0)'
+        document.querySelector('body').style.overflowY = 'hidden'
+    
+    })
+    closebar.addEventListener("click", (e) => {
+        leftbar.style.transform = 'translateX(-100%)'
+        document.querySelector('body').style.overflowY = 'scroll'
+    })
+    
+    
+}
+
 
 
 
@@ -178,7 +200,7 @@ tab2.forEach((item, index) => {
 
 
 
-let dfaqActive = 1;
+let dfaqActive = 0;
 const dfaq = document.querySelectorAll('.dfaq');
 
 function updateTab() {
@@ -224,18 +246,32 @@ const price = document.querySelector('.price')
 const price_content = document.querySelector('.price_content')
 
 sort.addEventListener('click', (e) => {
-    sort_content.style.display = 'block';
-    e.stopPropagation(); // Prevent click event from propagating to document
+    // sort_content.style.display = 'block';
+    if(sort_content.style.display === 'block'){
+        sort_content.style.display = 'none';
+    }
+    else{
+        sort_content.style.display = 'block';
+    }
+   
 });
 
 av.addEventListener('click', () => {
-    av_content.style.display = 'block'
-    e.stopPropagation(); // Prevent click event from propagating to document
+    if(av_content.style.display === 'block'){
+        av_content.style.display = 'none';
+    }
+    else{
+        av_content.style.display = 'block';
+    }
 })
 
 price.addEventListener('click', () => {
-    price_content.style.display = 'block'
-    e.stopPropagation(); // Prevent click event from propagating to document
+    if(price_content.style.display === 'block'){
+        price_content.style.display = 'none';
+    }
+    else{
+        price_content.style.display = 'block';
+    }
 })
 
 

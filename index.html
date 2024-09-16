@@ -32,10 +32,19 @@
         <div class=" bg-white border-b">
             <div class="container">
                 <div class="flex  items-center justify-between">
+                    <button id="openbar" class=" lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-menu">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                     <div class=" flex items-center pr-6 py-4 lg:py-0 gap-5">
-                        <img class="w-[90px] mt-2"
-                            src="https://paperthemedemo.myshopify.com/cdn/shop/files/paper.png?v=1666377006&width=400"
-                            alt="">
+                        <a href="/index.html"> <img class="w-[90px] mt-2"
+                                src="https://paperthemedemo.myshopify.com/cdn/shop/files/paper.png?v=1666377006&width=400"
+                                alt=""></a>
                         <div id="trend" class="hidden lg:flex items-center  cursor-pointer gap-1 px-4  py-6  pr-4">
                             <p class="text-[18px] he">Trending</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -82,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div id="trending" class=" absolute   top-[100px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
+        <div id="trending" class=" absolute   top-[109px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
             <div class="container">
                 <div class=" py-5 flex items-center justify-between">
                     <div>
@@ -103,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div id="tone" class=" absolute   top-[100px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
+        <div id="tone" class=" absolute   top-[109px] h-0 overflow-hidden left-0 w-full bg-white shadow-sm  ">
             <div class="container">
                 <div class=" py-5 flex items-center justify-between">
                     <div>
@@ -126,6 +135,100 @@
         </div>
 
     </section>
+    <div id="leftbar"
+        class=" h-screen transition-transform lg:hidden -translate-x-[100%] duration-300 ease-in-out  fixed right-0 h-full top-0 z-[600] w-full lg:w-[30vw] bg-white">
+        <div class=" bg-[#DEDEDE] px-4 py-2  flex items-center justify-between">
+            <button id="closebar" class=" bg-[#EEEEEE] p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <p class="text-[16px]">Cart (0)</p>
+        </div>
+       <div>
+        <div class=" border-t w-full dfaq">
+            <div class="w-full py-3 px-3 flex cursor-pointer items-center justify-between">
+                <h1 class="text-[20px] leading-[20px] font-semibold">Trending</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-up">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </div>
+            <div class="desc w-full flex flex-col w-full ">
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">New Arrivals</a>
+                </div>
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">Best Sellers</a>
+
+                </div>
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">All Collections</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class=" border-t w-full dfaq">
+            <div class="w-full py-3 px-3 flex cursor-pointer items-center justify-between">
+                <h1 class="text-[20px] leading-[20px] font-semibold">Tone</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-up">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </div>
+            <div class="desc w-full flex flex-col w-full ">
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">Moody</a>
+                </div>
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">Pastel</a>
+
+                </div>
+                <div class="py-3 bg-[#EEEEEE] px-3 w-full border-t">
+                    <a href="#" class="he text-[16px] ">Vibrand</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class=" border-t w-full ">
+            <div class="w-full py-3 px-3 flex cursor-pointer items-center justify-between">
+                <h1 class="text-[20px] leading-[20px] font-semibold">Subject</h1>
+              
+            </div>
+        </div>
+        <div class=" border-t w-full ">
+            <div class="w-full py-3 px-3 flex cursor-pointer items-center justify-between">
+                <h1 class="text-[20px] leading-[20px] font-semibold">About</h1>
+               
+            </div>
+        </div>
+    
+       </div>
+       <div class=" absolute bottom-0 w-full border-t left-0 p-3 ">
+        <div class="flex items-center gap-2">
+            <button
+                class=" hover:opacity-50 bg-black px-5 pt-3 pb-4 rounded-[32px] leading-[14px]  text-white">Log
+                in</button>
+
+            <button
+                class=" hover:opacity-50 bg-black pl-6 pr-5 pt-3 pb-3 rounded-[32px] flex items-center gap-1  text-white">
+                <img class="w-[18px] object-cover" src="https://flagicons.lipis.dev/flags/4x3/ca.svg"
+                    alt=""> <span class="leading-[16px] -mt-[3px]">$ CAD · EN</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+    </div>
     <div id="sidebar"
         class=" h-screen transition-transform duration-300 ease-in-out translate-x-[100%] fixed right-0 h-full top-0 z-[600] w-full lg:w-[30vw] bg-white">
         <div class=" bg-[#DEDEDE] px-4 py-2  flex items-center justify-between">
@@ -147,7 +250,7 @@
 
             </div>
         </div>
-        <div class=" w-full h-full  px-3 overflow-y-scroll ">
+        <div class=" w-full h-full  px-3 pb-[220px] overflow-y-scroll ">
             <div class="flex items-start py-5 border-b gap-4">
                 <img class="w-[80px] h-[80px] object-cover"
                     src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
@@ -458,7 +561,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-start py-5 border-b gap-4">
+            <div class="flex items-start py-5  border-b gap-4">
                 <img class="w-[80px] h-[80px] object-cover"
                     src="https://cdn.shopify.com/s/files/1/0620/4135/8535/products/GrapeVine.png?v=1658932890&width=150"
                     alt="">
@@ -657,7 +760,8 @@
             </h1>
             <div class=" grid mt-5 grid-cols-2 lg:grid-cols-4 gap-3">
                 <a href="/productdetails.html">
-                    <div class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                    <div
+                        class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
                         <img class=" w-full object-cover h-full"
                             src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
                             alt="">
@@ -666,7 +770,8 @@
                                 src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
                                 alt="">
                         </div>
-                        <div class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
+                        <div
+                            class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
                             <button
                                 class=" px-3 py-1 rounded-[20px] transform scale-[80%] lg:scale-100 font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
                             <button
@@ -683,11 +788,12 @@
                     <h2 class="text-[20px] mt-2">Grape Vine</h2>
                     <p>From $9 CAD</p>
                     <button
-                                class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
-                                to Cart</button>
+                        class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
+                        to Cart</button>
                 </a>
                 <a href="/productdetails.html">
-                    <div class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                    <div
+                        class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
                         <img class=" w-full object-cover h-full"
                             src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
                             alt="">
@@ -696,7 +802,8 @@
                                 src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
                                 alt="">
                         </div>
-                        <div class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
+                        <div
+                            class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
                             <button
                                 class=" px-3 py-1 rounded-[20px] transform scale-[80%] lg:scale-100 font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
                             <button
@@ -713,11 +820,12 @@
                     <h2 class="text-[20px] mt-2">Grape Vine</h2>
                     <p>From $9 CAD</p>
                     <button
-                                class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
-                                to Cart</button>
+                        class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
+                        to Cart</button>
                 </a>
                 <a href="/productdetails.html">
-                    <div class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                    <div
+                        class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
                         <img class=" w-full object-cover h-full"
                             src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
                             alt="">
@@ -726,7 +834,8 @@
                                 src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
                                 alt="">
                         </div>
-                        <div class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
+                        <div
+                            class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
                             <button
                                 class=" px-3 py-1 rounded-[20px] transform scale-[80%] lg:scale-100 font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
                             <button
@@ -743,11 +852,12 @@
                     <h2 class="text-[20px] mt-2">Grape Vine</h2>
                     <p>From $9 CAD</p>
                     <button
-                                class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
-                                to Cart</button>
+                        class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
+                        to Cart</button>
                 </a>
                 <a href="/productdetails.html">
-                    <div class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
+                    <div
+                        class="relative  cardParent w-full h-[250px] lg:h-[500px]  border-[1px]  overflow-hidden rounded-[2px]">
                         <img class=" w-full object-cover h-full"
                             src="https://paperthemedemo.myshopify.com/cdn/shop/products/Group4.png?v=1670529270&width=900"
                             alt="">
@@ -756,7 +866,8 @@
                                 src="https://paperthemedemo.myshopify.com/cdn/shop/products/GrapeVine.png?v=1658932890&width=800"
                                 alt="">
                         </div>
-                        <div class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
+                        <div
+                            class=" absolute top-2 left-0 lg:left-2 flex flex-col lg:flex-row items-center lg:gap-1 z-40">
                             <button
                                 class=" px-3 py-1 rounded-[20px] transform scale-[80%] lg:scale-100 font-semibold text-[14px] bg-[#DEDEDE] text-[#1e1e32]">Bestseller</button>
                             <button
@@ -773,10 +884,10 @@
                     <h2 class="text-[20px] mt-2">Grape Vine</h2>
                     <p>From $9 CAD</p>
                     <button
-                                class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
-                                to Cart</button>
+                        class=" w-[90%]  lg:hidden mt-2 bg-black rounded-[32px] pt-1 pb-2 text-[14px] lg:text-[16px] lg:py-3 flex items-center justify-center text-white">Add
+                        to Cart</button>
                 </a>
-                
+
             </div>
         </div>
     </section>
@@ -963,7 +1074,8 @@
                         <a href="#" class=" opacity-50 hover:underline hover:opacity-100 text-[20px]">Theme features</a>
                     </div>
                     <div class="flex gap-3 flex-col">
-                        <h2 class="text-[20px] font-semibold hover:underline hover:opacity-50 cursor-pointer">Support</h2>
+                        <h2 class="text-[20px] font-semibold hover:underline hover:opacity-50 cursor-pointer">Support
+                        </h2>
                         <a href="#" class=" opacity-50 hover:underline hover:opacity-100 text-[20px]">Help Center</a>
                         <a href="#" class=" opacity-50 hover:underline hover:opacity-100 text-[20px]">Contact</a>
 
@@ -978,12 +1090,14 @@
             <div class="container">
                 <div class="w-full flex flex-col lg:flex-row lg:items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <button class=" hover:opacity-50 bg-black px-5 pt-3 pb-4 rounded-[32px] leading-[14px]  text-white">Log
+                        <button
+                            class=" hover:opacity-50 bg-black px-5 pt-3 pb-4 rounded-[32px] leading-[14px]  text-white">Log
                             in</button>
 
                         <button
                             class=" hover:opacity-50 bg-black pl-6 pr-5 pt-3 pb-3 rounded-[32px] flex items-center gap-1  text-white">
-                            <img class="w-[18px] object-cover" src="https://flagicons.lipis.dev/flags/4x3/ca.svg" alt=""> <span class="leading-[16px] -mt-[3px]">$ CAD · EN</span>
+                            <img class="w-[18px] object-cover" src="https://flagicons.lipis.dev/flags/4x3/ca.svg"
+                                alt=""> <span class="leading-[16px] -mt-[3px]">$ CAD · EN</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="feather feather-chevron-down">
