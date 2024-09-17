@@ -1,39 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#image-slider', {
-        "type": "loop",
-        perPage: 4,
-        perMove: 1,
-        gap: 10,
+    const splide1 = document.getElementById('image-slider')
 
-        pagination: false,
-        breakpoints: {
-            600: {
-                perPage: 1,
-            },
-        }
-    }).mount();
+    if (splide1) {
+        new Splide('#image-slider', {
+            "type": "loop",
+            perPage: 4,
+            perMove: 1,
+            gap: 10,
+
+            pagination: false,
+            breakpoints: {
+                600: {
+                    perPage: 1,
+                },
+            }
+        }).mount();
+    }
 
 });
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#image-slider2', {
-        "type": "loop",
-        perPage: 2,
-        perMove: 1,
-        gap: 10,
+    const splide2 = document.getElementById('image-slider2')
+    if (splide2) {
+        new Splide('#image-slider2', {
+            "type": "loop",
+            perPage: 2,
+            perMove: 1,
+            gap: 10,
 
-        pagination: false,
-        breakpoints: {
-            600: {
-                perPage: 1,
-            },
-        }
-    }).mount();
+            pagination: false,
+            breakpoints: {
+                600: {
+                    perPage: 1,
+                },
+            }
+        }).mount();
 
 
 
+    }
 });
 
 let lastScrollTop = 0;
